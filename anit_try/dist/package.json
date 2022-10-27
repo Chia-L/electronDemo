@@ -1,0 +1,36 @@
+{
+  "name": "demo",
+  "productName": "科力锐防勒索",
+  "author": "clw",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "electronVersion": "18.3.15",
+    "directories": {
+      "output": "packages"
+    },
+    "win": {
+      "requestedExecutionLevel": "highestAvailable",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0"
+  },
+  "dependencies": {
+    "electron-packager": "^17.0.0"
+  }
+}
